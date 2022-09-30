@@ -84,7 +84,7 @@ If you have any questions, please contact Ling Sun,E-mail:ling.sun-01@qq.com
 The small image in the upper right corner is the normalized sheep face extracted according to the detection result
  - Detection examples on infrared image with LAD-RCNN.
 ![Detection examples on infrared image with LAD-RCNN.](https://github.com/SheepBreedingLaboratory/LAD-RCNN/blob/main/Figure/infrared.jpg)
-If you want to detection object in infrared images, please set INPUT_CHANNEL=3 in config file. The small image in the upper right corner is the normalized goat face extracted according to the detection result
+If you want to detection object in infrared images, please set INPUT_CHANNEL=1 in config file. 
 
 # Citation
 
