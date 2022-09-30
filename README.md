@@ -61,6 +61,8 @@ This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Liv
  - Set config.TFRECORD_PATH1 to the url of dataset1
  - Set config.TFRECORD_PATH2 to the url of dataset2
  - You could directly used the original parameters on frist training, and then modify the transformation parameters of dataset1 and dataset2 according to the test result.
+ - Image input size is NOT restricted in `400 * 400`, You can adjust your input sizes for a different size or different input ratio. Larger input size could help detect smaller targets, but may be slower and GPU memory exhausting.
+
  - All the parameter in config file could be adjusted according to the prompts 
 
 
