@@ -92,7 +92,7 @@ We would happy to hear back from you in you find LAD-RCNN useful. If you use the
 
     @article{
         Author = {Ling Sun, Guiqiong Liu, Junrui Liu, Xunping Jiang*, Xu Wang, Han Yang, Shiping Yang},
-        Title = {An Implementation of Faster RCNN with Study for Region Sampling},
+        Title = {LAD-RCNN: A Powerful Tool for Livestock Face Detection and Normalization},
         Journal = {},
         Year = {2022}
     }
