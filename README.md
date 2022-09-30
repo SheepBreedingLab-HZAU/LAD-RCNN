@@ -76,7 +76,7 @@ If you have any questions, please contact Ling Sun,E-mail:ling.sun-01@qq.com
 ```
 
 # Requirement
-	 - [ ] TensorFlow  2.8.0
+- [ ] TensorFlow  2.8.0
 
 # Detection Results
  - Detection examples on sheep bird-view image with LAD-RCNN.
