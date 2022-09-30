@@ -68,7 +68,7 @@ This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Liv
 ## 5 Start training
 
 ```
- python train.py -ts
+ python train.py -ts 25000
 
 -ts train steps
 
