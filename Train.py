@@ -271,5 +271,5 @@ def _build_faster_rcnn_model(is_training):
 
         
 if __name__=="__main__":
-    train_loop(train_steps=10,loggstep=1,checkpoint_every_n=4)        
+    train_loop()        
  
