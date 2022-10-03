@@ -3,7 +3,7 @@
 # Licensed under the MIT license;
 
 #code_15 config file
-"""Functions to build DetectionModel training optimizers."""
+"""Functions to build training optimizers."""
 
 import tensorflow as tf
 import tools.config as config
