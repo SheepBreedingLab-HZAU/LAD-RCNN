@@ -1,3 +1,7 @@
+# Copyright (c) 2022 Jiang Xunping and Sun Ling.
+#
+# Licensed under the MIT;
+
 #code_15 config file
 """Functions to build DetectionModel training optimizers."""
 

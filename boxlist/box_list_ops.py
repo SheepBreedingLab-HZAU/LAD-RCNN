@@ -1,3 +1,6 @@
+# Copyright (c) 2022 Jiang Xunping and Sun Ling.
+#
+# Licensed under the MIT;
 #code_13 BoxList opera
 
 """Bounding Box List operations."""

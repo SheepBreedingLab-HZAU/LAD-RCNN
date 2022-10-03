@@ -1,3 +1,6 @@
+# Copyright (c) 2022 Jiang Xunping and Sun Ling.
+#
+# Licensed under the MIT;
 # coding: utf-8
 # In[ ]:
 #code_01 train
