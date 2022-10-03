@@ -1,6 +1,6 @@
 # Copyright (c) 2022 Jiang Xunping and Sun Ling.
 #
-# Licensed under the MIT;
+# Licensed under the MIT license;
 # code_08:build model subprog Anchor Generator
 """Generates grid anchors
 """

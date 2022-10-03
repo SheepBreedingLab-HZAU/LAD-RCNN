@@ -1,6 +1,6 @@
 # Copyright (c) 2022 Jiang Xunping and Sun Ling.
 #
-# Licensed under the MIT;
+# Licensed under the MIT license;
 # -*- coding: utf-8 -*-
 # code_07:build model subprog box predictor header
 

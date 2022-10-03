@@ -1,6 +1,6 @@
 # Copyright (c) 2022 Jiang Xunping and Sun Ling.
 #
-# Licensed under the MIT;
+# Licensed under the MIT license;
 
 #code_03:build dataset
 """Model input function for tf-learn object detection model."""

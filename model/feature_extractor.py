@@ -1,6 +1,6 @@
 # Copyright (c) 2022 Jiang Xunping and Sun Ling.
 #
-# Licensed under the MIT;
+# Licensed under the MIT license;
 
 # code_06:build model subprog extractor features
 
