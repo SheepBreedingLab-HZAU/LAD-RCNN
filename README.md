@@ -90,7 +90,7 @@ If you want to detection object in infrared images, please set INPUT_CHANNEL=1 i
 
 # Citation
 
-We would happy to hear back from you in you find LAD-RCNN useful. If you use the LAD-RCNN for a research publication, please consider citing:
+We would be happy to hear back from you in you find LAD-RCNN useful. If you use the LAD-RCNN for a research publication, please consider citing:
 
     @article{
         Author = {Ling Sun, Guiqiong Liu, Junrui Liu, Xunping Jiang*, Xu Wang, Han Yang, Shiping Yang},
