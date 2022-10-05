@@ -38,8 +38,8 @@ IMG_WIDTH=400 #input size
 BATCH_SIZE1=7 #batch of data that has angle data
 BATCH_SIZE2=5 #batch of data that has no angle data
 
-TFRECORD_PATH1= ['D:/USER/Document/Python1/Identification/dataset/tfrecord/Sheep_angle.tfrecord']#The url of dataset1 which has angle data
-TFRECORD_PATH2= ["D:/USER/Document/Python1/Identification/dataset/tfrecord/Sheep_noangle_amp.tfrecord"] #The url of dataset1 which has no angle data
+TFRECORD_PATH1= [""]#The url of dataset1 which has angle data
+TFRECORD_PATH2= [""] #The url of dataset1 which has no angle data
 
 ROTATE_IGNORE_THERSHOLD=0.025 #should between [0,1]
 
