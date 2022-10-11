@@ -9,7 +9,7 @@ This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Liv
 
 
 # Framework
-![The overall pipeline of the LAD-RCNN](https://cars38.com/other/LAD-RCNN/pipeline.jpg)
+![The overall pipeline of the LAD-RCNN](https://github.com/SheepBreedingLaboratory/LAD-RCNN/blob/main/Figure/LAD-RCNN.jpg)
 
 
 
@@ -82,10 +82,10 @@ If you have any questions, please contact Ling Sun,E-mail:ling.sun-01@qq.com
 - [ ] Python > 3.7
 # Detection Results
  - Detection examples on sheep bird-view image with LAD-RCNN.
-![Detection examples on sheep bird-view image with LAD-RCNN.](https://cars38.com/other/LAD-RCNN/Sheep.jpg)
+![Detection examples on sheep bird-view image with LAD-RCNN.](https://github.com/SheepBreedingLaboratory/LAD-RCNN/blob/main/Figure/Sheep.jpg)
 The small image in the upper right corner is the normalized sheep face extracted according to the detection result
  - Detection examples on infrared image with LAD-RCNN.
-![Detection examples on infrared image with LAD-RCNN.](https://cars38.com/other/LAD-RCNN/infrared.jpg)
+![Detection examples on infrared image with LAD-RCNN.](https://github.com/SheepBreedingLaboratory/LAD-RCNN/blob/main/Figure/infrared.jpg)
 If you want to detection object in infrared images, please set INPUT_CHANNEL=1 in config file. 
 
 # Citation
