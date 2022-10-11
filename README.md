@@ -5,7 +5,7 @@
 ![](https://img.shields.io/static/v1?label=TensorFlow&message=2.8&color=<COLOR>)
 ![](https://img.shields.io/static/v1?label=license&message=MIT&color=green)
 
-This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization]()"
+This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization](/)"
 
 
 # Framework
