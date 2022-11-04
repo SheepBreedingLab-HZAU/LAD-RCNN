@@ -5,7 +5,7 @@
 ![](https://img.shields.io/static/v1?label=TensorFlow&message=2.8&color=<COLOR>)
 ![](https://img.shields.io/static/v1?label=license&message=MIT&color=green)
 
-This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization](/)"
+This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization](https://arxiv.org/abs/2210.17146)"
 
 
 # Framework
@@ -76,7 +76,7 @@ This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Liv
 
 If you have any questions, please contact Ling Sun,E-mail:ling.sun-01@qq.com
 ```
-
+ 
 # Requirement
 - [ ] TensorFlow  2.8.0
 - [ ] Python > 3.7
@@ -93,8 +93,8 @@ If you want to detection object in infrared images, please set INPUT_CHANNEL=1 i
 We would be happy to hear back from you in you find LAD-RCNN useful. If you use the LAD-RCNN for a research publication, please consider citing:
 
     @article{
-        Author = {Ling Sun, Guiqiong Liu, Junrui Liu, Xunping Jiang*, Xu Wang, Han Yang, Shiping Yang},
+        Author = {Ling Sun, Guiqiong Liu, Xunping Jiang*,Junrui Liu, Xu Wang, Han Yang, Shiping Yang},
         Title = {LAD-RCNN: A Powerful Tool for Livestock Face Detection and Normalization},
-        Journal = {},
+        Journal = {arxiv},
         Year = {2022}
     }
