@@ -5,7 +5,7 @@
 ![](https://img.shields.io/static/v1?label=TensorFlow&message=2.8&color=<COLOR>)
 ![](https://img.shields.io/static/v1?label=license&message=MIT&color=green)
 
-This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization](https://arxiv.org/abs/2210.17146)"
+This is official TensorFlow implementation of "[LAD-RCNN:A Powerful Tool for Livestock Face Detection and Normalization]()"
 
 
 # Framework
@@ -95,6 +95,6 @@ We would be happy to hear back from you in you find LAD-RCNN useful. If you use 
     @article{
         Author = {Ling Sun, Guiqiong Liu, Xunping Jiang*,Junrui Liu, Xu Wang, Han Yang, Shiping Yang},
         Title = {LAD-RCNN: A Powerful Tool for Livestock Face Detection and Normalization},
-        Journal = {arxiv},
+        Journal = {},
         Year = {2022}
     }
