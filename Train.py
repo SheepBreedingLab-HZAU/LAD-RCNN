@@ -78,18 +78,13 @@ def _compute_losses_and_predictions_dicts(
 
 
 
-def normalize_dict(values_dict, num_replicas):
 
-    num_replicas = tf.constant(num_replicas, dtype=tf.float32)
-    return {key: tf.math.divide(loss, num_replicas) for key, loss
-                    in values_dict.items()}
 
 def eager_train_step(detection_model,
                     features,
                     labels, 
                     optimizer,
-                    training_step,                         
-                    num_replicas=1.0):
+                    training_step):
     """
         detection_model: A DetectionModel (based on Keras) to train.
         features: Dictionary of feature tensors from the input dataset.
@@ -110,7 +105,7 @@ def eager_train_step(detection_model,
                 detection_model, features, labels,
                 training_step=training_step)
 
-        losses_dict = normalize_dict(losses_dict, num_replicas)
+
 
     trainable_variables = detection_model.trainable_variables
 
