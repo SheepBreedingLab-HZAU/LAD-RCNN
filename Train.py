@@ -14,16 +14,13 @@
 
 #code_01 train
 import os
-
-
 import tensorflow as tf
 import time
-
+import numpy as np
 import model_build
 import tools.standard_fields as fields
 import dataset.inputs as inputs
 import tools.config as config
-import tools.optimizer_builder as optimizer_builder
 
 args=config.args
 sequence=args.sequence
@@ -35,16 +32,50 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.INFO)
 
 tf.compat.v1.logging.info("start")
 
-import logging
-logger = logging.getLogger()
-while logger.handlers:
-         logger.handlers.pop()
 
 
 
 print(config.BASE_MODEL,config.TRAIN_NUM_STEP,sequence)
 
+def build_optimizer(global_step=None):
+    """
+        global_step: A variable representing the current step.
+    """
+    
+    optimizer = None
+    if global_step is None:
+        global_step = tf.train.get_or_create_global_step()
 
+    learning_rate_base=config.LEARNING_RATE_BASE
+    total_steps=config.TRAIN_NUM_STEP
+    warmup_learning_rate=config.WARMUP_LEARNING_RATE
+    warmup_steps=config.WARMUP_STEPS
+    hold_base_rate_steps=config.HOLD_BASE_RATE_STEPS
+    def learning_rate_fn():
+        learning_rate = 0.5 * learning_rate_base * (1 + tf.cos(
+                np.pi *
+                (tf.cast(global_step, tf.float32) - warmup_steps - hold_base_rate_steps
+                ) / float(total_steps - warmup_steps - hold_base_rate_steps)))
+        if hold_base_rate_steps > 0:
+            learning_rate = tf.where(
+                    global_step > warmup_steps + hold_base_rate_steps,
+                    learning_rate, learning_rate_base)
+        if warmup_steps > 0:
+            slope = (learning_rate_base - warmup_learning_rate) / warmup_steps
+            warmup_rate = slope * tf.cast(global_step,
+                                                                        tf.float32) + warmup_learning_rate
+            learning_rate = tf.where(global_step < warmup_steps, warmup_rate,
+                                                             learning_rate)
+        return tf.where(global_step > total_steps, 0.0, learning_rate,
+                                        name='learning_rate')
+    
+
+   
+    optimizer = tf.keras.optimizers.SGD(
+        learning_rate_fn,
+        momentum=0.90)
+
+    return optimizer, learning_rate_fn
 
 
 def _compute_losses_and_predictions_dicts(
@@ -79,7 +110,6 @@ def _compute_losses_and_predictions_dicts(
 
 
 
-
 def eager_train_step(detection_model,
                     features,
                     labels, 
@@ -105,7 +135,7 @@ def eager_train_step(detection_model,
                 detection_model, features, labels,
                 training_step=training_step)
 
-
+        
 
     trainable_variables = detection_model.trainable_variables
 
@@ -154,7 +184,7 @@ def train_loop(train_steps=None,#None
         aggregation=tf.compat.v2.VariableAggregation.ONLY_FIRST_REPLICA)
     
     
-    optimizer, (learning_rate,) = optimizer_builder.build(global_step=global_step)
+    optimizer, learning_rate = build_optimizer(global_step=global_step)
 
 
     summary_writer_filepath=os.path.join(model_dir, 'train')
@@ -271,7 +301,6 @@ def _build_faster_rcnn_model(is_training):
         localization_loss_weight=config.LOCALIZATION_LOSS_WEIGHT,
         objectness_loss_weight=config.OBJECTNESS_LOSS_WEIGHT,
         iou_thershold=config.NMS_IOU_THRESHOLD)
-
 
         
 if __name__=="__main__":
