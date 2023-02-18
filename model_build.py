@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Jiang Xunping and Sun Ling
+# Copyright (c) 2023 Jiang Xunping and Sun Ling
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -77,8 +77,7 @@ class Model(tf.keras.layers.Layer):
 
         self._minibatch_size = minibatch_size
         self._sampler = sampler.BalancedPositiveNegativeSampler(
-                positive_fraction=0.2 #TODO(sunling) 0.5->0.2
-                )
+                positive_fraction=0.2)
         num_anchors_per_location = (
                 self._anchor_generator.num_anchors_per_location())
 
@@ -90,7 +89,7 @@ class Model(tf.keras.layers.Layer):
                         num_predictions_per_location=num_anchors_per_location[0],
                         name='BoxPredictor'))
 
-        self._nms_fn=functools.partial( #TODO(sunling)testNMS
+        self._nms_fn=functools.partial(
                 tf.image.non_max_suppression,
                 max_output_size=300,
                 iou_threshold=0.4,
