@@ -93,7 +93,7 @@ If you want to detection object in infrared images, please set INPUT_CHANNEL=1 i
 We would be happy to hear back from you in you find LAD-RCNN useful. If you use the LAD-RCNN for a research publication, please consider citing:
 
     @article{
-        Author = {Ling Sun, Guiqiong Liu, Xunping Jiang*,Junrui Liu, Xu Wang, Han Yang, Shiping Yang},
+        Author = {Ling Sun, Guiqiong Liu, Huiguo Yang, Xunping Jiang*,Junrui Liu, Xu Wang, Han Yang, Shiping Yang},
         Title = {LAD-RCNN: A Powerful Tool for Livestock Face Detection and Normalization},
         Journal = {},
         Year = {2023}
